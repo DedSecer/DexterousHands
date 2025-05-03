@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="leap_hands_sensors">
+  <link name="world" />
+    <joint name="world_to_base" type="fixed">
+        <parent link="world" />
+        <child link="base_link" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.000192010859536108 0.00561136739440215 0.0863994249425732"
+        rpy="0 0 0" />
+      <mass
+        value="0.339907849406728" />
+      <inertia
+        ixx="0.000999054881917572"
+        ixy="2.61862898219978E-06"
+        ixz="1.15286491170818E-05"
+        iyy="0.000495737866552878"
+        iyz="-6.2038226410816E-06"
+        izz="0.000613879769481654" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="thumb_link0">
+    <inertial>
+      <origin
+        xyz="0.00635871340159353 -0.000529366076100948 0.0346316491938202"
+        rpy="0 0 0" />
+      <mass
+        value="0.0266804832436073" />
+      <inertia
+        ixx="2.80623400956804E-06"
+        ixy="-2.37451311715859E-08"
+        ixz="1.02793776569846E-10"
+        iyy="3.92484071972271E-06"
+        iyz="-3.50621450694263E-14"
+        izz="4.12909434455265E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/thumb_link0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/thumb_link0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_0"
+    type="revolute">
+    <origin
+      xyz="0.00994999999999999 0.0686500000000001 0.0678"
+      rpy="-3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="thumb_link0" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="thumb_link1">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 9.71445146547012E-17 -0.0297704842451003"
+        rpy="0 0 0" />
+      <mass
+        value="0.00631322406020068" />
+      <inertia
+        ixx="2.65974771229312E-06"
+        ixy="-3.0701160951563E-22"
+        ixz="-1.45757844337017E-21"
+        iyy="1.21593624074906E-06"
+        iyz="-6.67766515741628E-21"
+        izz="2.19813180792017E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/thumb_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/thumb_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_1"
+    type="revolute">
+    <origin
+      xyz="1.00000000000031E-05 0 0.036"
+      rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent
+      link="thumb_link0" />
+    <child
+      link="thumb_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57" upper="1.57" effort="0.95" velocity="4.24" />
+  </joint>
+  <link
+    name="thumb_link2">
+    <inertial>
+      <origin
+        xyz="-2.82602271654137E-06 -0.0259258828327467 0.000336898624326683"
+        rpy="0 0 0" />
+      <mass
+        value="0.0569149616096496" />
+      <inertia
+        ixx="1.26415617749198E-05"
+        ixy="1.4003331089783E-13"
+        ixz="3.50621452243423E-14"
+        iyy="1.04625862519556E-05"
+        iyz="-2.37451311715902E-08"
+        izz="9.33497180499109E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/thumb_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/thumb_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_2"
+    type="revolute">
+    <origin
+      xyz="0 0.000100000000000051 -0.05"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="thumb_link1" />
+    <child
+      link="thumb_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="thumb_link3">
+    <inertial>
+      <origin
+        xyz="3.60875872345914E-05 -0.0329626771696209 0.000229342832769985"
+        rpy="0 0 0" />
+      <mass
+        value="0.0639707502403985" />
+      <inertia
+        ixx="1.35996030773995E-05"
+        ixy="-1.36946715851458E-06"
+        ixz="4.00025670697411E-11"
+        iyy="8.77985070105528E-06"
+        iyz="-2.37470112723229E-08"
+        izz="1.29985179371957E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/thumb_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/thumb_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_thumb_3"
+    type="revolute">
+    <origin
+      xyz="0 -0.07285 3.99999999999429E-05"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_link2" />
+    <child
+      link="thumb_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link1_1">
+    <inertial>
+      <origin
+        xyz="-0.042359147837832 -0.0252071672019934 0.000132615138007164"
+        rpy="0 0 0" />
+      <mass
+        value="0.0758406131950689" />
+      <inertia
+        ixx="2.73594032205275E-05"
+        ixy="-6.4789500531738E-06"
+        ixz="2.0125664275419E-11"
+        iyy="1.92543860151484E-05"
+        iyz="9.57638652458169E-11"
+        izz="2.98969695156201E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link1_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link1_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1_1"
+    type="revolute">
+    <origin
+      xyz="0.00950999999999999 0.0600000000000001 0.1495"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link1_2">
+    <inertial>
+      <origin
+        xyz="0.000538542178922768 -0.0097920622707458 -0.0346598350000008"
+        rpy="0 0 0" />
+      <mass
+        value="0.0272416271930086" />
+      <inertia
+        ixx="3.92667046561588E-06"
+        ixy="2.37451311715874E-08"
+        ixz="3.50621457971462E-14"
+        iyy="2.8471932929542E-06"
+        iyz="-1.03073843195019E-10"
+        izz="4.17005362793882E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link1_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link1_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1_2"
+    type="revolute">
+    <origin
+      xyz="-0.05836 -0.036 0.000199999999999957"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="link1_1" />
+    <child
+      link="link1_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.047" upper="1.047" effort="0.95" velocity="2.42"/>
+  </joint>
+  <link
+    name="link1_3">
+    <inertial>
+      <origin
+        xyz="-0.00368217771244009 0.0371428825324757 -0.000246685002863234"
+        rpy="0 0 0" />
+      <mass
+        value="0.0494548546446004" />
+      <inertia
+        ixx="8.07572025923031E-06"
+        ixy="2.27769397312737E-07"
+        ixz="2.37451311715831E-08"
+        iyy="9.41486864117216E-06"
+        iyz="-3.50621462515094E-14"
+        izz="7.20241172040266E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link1_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link1_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1_3"
+    type="revolute">
+    <origin
+      xyz="0 -0.0160099999999999 -0.036"
+      rpy="3.14159265358979 1.5707963267949 0" />
+    <parent
+      link="link1_2" />
+    <child
+      link="link1_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link1_4">
+    <inertial>
+      <origin
+        xyz="0.0364385540543888 0.000117347902355215 9.99803508941605E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0391977997319107" />
+      <inertia
+        ixx="6.70148748791325E-06"
+        ixy="-5.88182463579405E-08"
+        ixz="1.06560154170185E-11"
+        iyy="1.24483999424001E-05"
+        iyz="-2.18797121157454E-12"
+        izz="9.89509117602692E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link1_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link1_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1_4"
+    type="revolute">
+    <origin
+      xyz="0 0.05 0"
+      rpy="3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="link1_3" />
+    <child
+      link="link1_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link2_1">
+    <inertial>
+      <origin
+        xyz="-0.0423591478627871 -0.0252071672188181 0.000132615123431455"
+        rpy="0 0 0" />
+      <mass
+        value="0.0758406131041249" />
+      <inertia
+        ixx="2.73594032028566E-05"
+        ixy="-6.47895004629264E-06"
+        ixz="2.01379125868162E-11"
+        iyy="1.92543859912963E-05"
+        iyz="9.5773535338083E-11"
+        izz="2.98969695021654E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link2_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link2_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2_1"
+    type="revolute">
+    <origin
+      xyz="0.00951 0 0.1495"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link2_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link2_2">
+    <inertial>
+      <origin
+        xyz="0.000538542178922829 -0.00979206227074589 -0.0346598350000008"
+        rpy="0 0 0" />
+      <mass
+        value="0.0272416271930087" />
+      <inertia
+        ixx="3.92667046561589E-06"
+        ixy="2.37451311715866E-08"
+        ixz="3.50621456763199E-14"
+        iyy="2.84719329295421E-06"
+        iyz="-1.03073843194552E-10"
+        izz="4.17005362793882E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link2_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link2_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2_2"
+    type="revolute">
+    <origin
+      xyz="-0.05836 -0.036 0.000199999999999955"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="link2_1" />
+    <child
+      link="link2_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.047" upper="1.047" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link2_3">
+    <inertial>
+      <origin
+        xyz="-0.00368217771244009 0.0371428825324756 -0.000246685002863234"
+        rpy="0 0 0" />
+      <mass
+        value="0.0494548546446004" />
+      <inertia
+        ixx="8.0757202592303E-06"
+        ixy="2.27769397312738E-07"
+        ixz="2.37451311715829E-08"
+        iyy="9.41486864117216E-06"
+        iyz="-3.50621462530372E-14"
+        izz="7.20241172040265E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link2_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link2_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2_3"
+    type="revolute">
+    <origin
+      xyz="0 -0.01601 -0.036"
+      rpy="3.14159265358979 1.5707963267949 0" />
+    <parent
+      link="link2_2" />
+    <child
+      link="link2_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link2_4">
+    <inertial>
+      <origin
+        xyz="0.0364385540543889 0.000117347902355319 9.99803508941639E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0391977997319106" />
+      <inertia
+        ixx="6.70148748791291E-06"
+        ixy="-5.88182463580747E-08"
+        ixz="1.06560154014046E-11"
+        iyy="1.24483999424001E-05"
+        iyz="-2.18797121834816E-12"
+        izz="9.8950911760266E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link2_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link2_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2_4"
+    type="revolute">
+    <origin
+      xyz="0 0.05 0"
+      rpy="3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="link2_3" />
+    <child
+      link="link2_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link3_1">
+    <inertial>
+      <origin
+        xyz="-0.042359147837832 -0.0252071672019933 0.000132615138007136"
+        rpy="0 0 0" />
+      <mass
+        value="0.0758406131950689" />
+      <inertia
+        ixx="2.73594032205275E-05"
+        ixy="-6.47895005317378E-06"
+        ixz="2.01256642838226E-11"
+        iyy="1.92543860151484E-05"
+        iyz="9.57638652431645E-11"
+        izz="2.98969695156201E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link3_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link3_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3_1"
+    type="revolute">
+    <origin
+      xyz="0.00951000000000001 -0.0599999999999999 0.1495"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link3_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link3_2">
+    <inertial>
+      <origin
+        xyz="0.000538542178922852 -0.00979206227074583 -0.0346598350000008"
+        rpy="0 0 0" />
+      <mass
+        value="0.0272416271930086" />
+      <inertia
+        ixx="3.92667046561587E-06"
+        ixy="2.37451311715867E-08"
+        ixz="3.50621451709634E-14"
+        iyy="2.8471932929542E-06"
+        iyz="-1.03073843195546E-10"
+        izz="4.17005362793881E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link3_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link3_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3_2"
+    type="revolute">
+    <origin
+      xyz="-0.05836 -0.036 0.000199999999999964"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="link3_1" />
+    <child
+      link="link3_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.047" upper="1.047" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link3_3">
+    <inertial>
+      <origin
+        xyz="-0.00368217771244009 0.0371428825324756 -0.000246685002863178"
+        rpy="0 0 0" />
+      <mass
+        value="0.0494548546446004" />
+      <inertia
+        ixx="8.07572025923029E-06"
+        ixy="2.27769397312735E-07"
+        ixz="2.37451311715866E-08"
+        iyy="9.41486864117214E-06"
+        iyz="-3.50621444863953E-14"
+        izz="7.20241172040264E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link3_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link3_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3_3"
+    type="revolute">
+    <origin
+      xyz="0 -0.0160099999999999 -0.036"
+      rpy="3.14159265358979 1.5707963267949 0" />
+    <parent
+      link="link3_2" />
+    <child
+      link="link3_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <link
+    name="link3_4">
+    <inertial>
+      <origin
+        xyz="0.0364385540543888 0.000117347902355271 9.99803508941605E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0391977997319107" />
+      <inertia
+        ixx="6.70148748791299E-06"
+        ixy="-5.8818246357873E-08"
+        ixz="1.06560154055785E-11"
+        iyy="1.24483999424001E-05"
+        iyz="-2.18797122003928E-12"
+        izz="9.89509117602667E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link3_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://leap_hands_sensors/meshes/link3_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3_4"
+    type="revolute">
+    <origin
+      xyz="0 0.05 0"
+      rpy="-3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="link3_3" />
+    <child
+      link="link3_4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.314" upper="1.57" effort="0.95" velocity="2.42" />
+  </joint>
+  <transmission name="trans_joint_thumb_0">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_thumb_0">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_thumb_0_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_thumb_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_thumb_1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_thumb_1_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_thumb_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_thumb_2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_thumb_2_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_thumb_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_thumb_3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_thumb_3_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_1_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_1_1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_1_1_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_1_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_1_2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_1_2_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_1_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_1_3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_1_3_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_1_4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_1_4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_1_4_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_2_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_2_1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_2_1_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_2_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_2_2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_2_2_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_2_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_2_3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_2_3_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_2_4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_2_4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_2_4_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_3_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_3_1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_3_1_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_3_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_3_2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_3_2_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_3_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_3_3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_3_3_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <transmission name="trans_joint_3_4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_3_4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_3_4_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+  </transmission>
+  <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+          <robotNamespace>/leap_hands_sensors</robotNamespace>
+          <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+          <robotParam>/robot_description</robotParam>
+          <publishJointStates>true</publishJointStates>
+          <!-- 禁用PID控制，直接传递位置指令 -->
+          <pid_gains_mode>skip</pid_gains_mode>
+          <legacyModeNS>true</legacyModeNS>
+          <controlPeriod>0.001</controlPeriod>
+      </plugin>
+  </gazebo>
+</robot>

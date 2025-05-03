@@ -1,0 +1,24 @@
+# urdf.rviz
+visualization:
+  class_name: "rviz"
+  display_settings:
+    - class_name: "RobotModel"
+      name: "Robot Model"
+      property_group: "RobotModel"
+      properties:
+        - class_name: "Property"
+          name: "Visible"
+          type: "bool"
+          value: True
+        - class_name: "Property"
+          name: "Collision Enabled"
+          type: "bool"
+          value: False
+        - class_name: "Property"
+          name: "Update Rate"
+          type: "int"
+          value: 10
+        - class_name: "Property"
+          name: "Fixed Frame"
+          type: "string"
+          value: "world"

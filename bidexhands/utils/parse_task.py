@@ -30,6 +30,8 @@ from bidexhands.tasks.shadow_hand_block_stack import ShadowHandBlockStack
 from bidexhands.tasks.allegro_hand_over import AllegroHandOver
 from bidexhands.tasks.allegro_hand_catch_underarm import AllegroHandCatchUnderarm
 
+from bidexhands.tasks.leap_hand_over import LeapHandOver
+
 # Meta
 from bidexhands.tasks.shadow_hand_meta.shadow_hand_meta_mt1 import ShadowHandMetaMT1
 from bidexhands.tasks.shadow_hand_meta.shadow_hand_meta_ml1 import ShadowHandMetaML1

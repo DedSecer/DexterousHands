@@ -1,0 +1,47 @@
+# config/controllers.yaml
+#joint1_controller:
+ # type: effort_controllers/JointEffortController  # 力控制（适合电机力矩控制）
+#  joint: joint1                                   # 关节名称
+# pid: {p: 100.0, i: 0.01, d: 10.0}              # PID参数（根据需求调整）
+
+# 若使用位置控制：
+controller_manager:
+    joint_state_controller:
+      type: joint_state_controller/JointStateController
+      publish_rate: 50  # Hz
+
+    joints_thumb_controller:
+      type: position_controllers/JointGroupPositionController
+      joints:  [joint_thumb_0, joint_thumb_1, joint_thumb_2, joint_thumb_3]
+      pid_gains:
+        joint_thumb_0: {p: 100, i: 0, d: 1.0}
+        joint_thumb_1: {p: 100, i: 0, d: 1.0}
+        joint_thumb_2: {p: 100, i: 0, d: 1.0}
+        joint_thumb_3: {p: 100, i: 0, d: 1.0}
+
+    joints_index_controller:
+      type: position_controllers/JointGroupPositionController
+      joints: [joint_1_1,joint_1_2,joint_1_3,joint_1_4]
+      pid_gains:
+        joint_1_1: {p: 100, i: 0, d: 1.0}
+        joint_1_2: {p: 100, i: 0, d: 1.0}
+        joint_1_3: {p: 100, i: 0, d: 1.0}
+        joint_1_4: {p: 100, i: 0, d: 1.0}
+  
+    joints_middle_controller:
+      type: position_controllers/JointGroupPositionController
+      joints: [ joint_2_1,joint_2_2,joint_2_3,joint_2_4]
+      pid_gains:
+        joint_2_1: {p: 100, i: 0, d: 1.0}
+        joint_2_2: {p: 100, i: 0, d: 1.0}
+        joint_2_3: {p: 100, i: 0, d: 1.0}
+        joint_2_4: {p: 100, i: 0, d: 1.0}
+  
+    joints_ring_controller:
+      type: position_controllers/JointGroupPositionController
+      joints: [joint_3_1,joint_3_2,joint_3_3,joint_3_4]
+      pid_gains:
+        joint_3_1: {p: 100, i: 0, d: 1.0}
+        joint_3_2: {p: 100, i: 0, d: 1.0}
+        joint_3_3: {p: 100, i: 0, d: 1.0}
+        joint_3_4: {p: 100, i: 0, d: 1.0}
