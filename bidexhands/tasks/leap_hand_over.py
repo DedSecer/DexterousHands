@@ -292,10 +292,12 @@ class LeapHandOver(BaseTask):
         allegro_hand_start_pose = gymapi.Transform()
         allegro_hand_start_pose.p = gymapi.Vec3(*get_axis_params(0.5, self.up_axis_idx))
         allegro_hand_start_pose.r = gymapi.Quat().from_euler_zyx(1.571, -1.571, 0)
+        allegro_hand_start_pose.r *= gymapi.Quat().from_euler_zyx(0, -0.4, 0)
 
         allegro_another_hand_start_pose = gymapi.Transform()
-        allegro_another_hand_start_pose.p = gymapi.Vec3(0, -0.8, 0.5)
+        allegro_another_hand_start_pose.p = gymapi.Vec3(0, -0.7, 0.5)
         allegro_another_hand_start_pose.r = gymapi.Quat().from_euler_zyx(-1.571, -1.571, 0)
+        allegro_another_hand_start_pose.r *= gymapi.Quat().from_euler_zyx(0, -0.4, 0)
 
         object_start_pose = gymapi.Transform()
         object_start_pose.p = gymapi.Vec3()
@@ -308,7 +310,7 @@ class LeapHandOver(BaseTask):
         if self.object_type == "pen":
             object_start_pose.p.z = allegro_hand_start_pose.p.z + 0.02
 
-        self.goal_displacement = gymapi.Vec3(0., -0.35, 0.)
+        self.goal_displacement = gymapi.Vec3(0., -0.18, -0.05)
         self.goal_displacement_tensor = to_torch(
             [self.goal_displacement.x, self.goal_displacement.y, self.goal_displacement.z], device=self.device)
         goal_start_pose = gymapi.Transform()
