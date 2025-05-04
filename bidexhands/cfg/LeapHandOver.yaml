@@ -1,9 +1,9 @@
 # if given, will override the device setting in gym. 
 env: 
   env_name: "leap_hand_over"
-  numEnvs: 8
+  numEnvs: 1000
   envSpacing: 0.75
-  episodeLength: 75
+  episodeLength: 100
   enableDebugVis: False
   cameraDebug: False
   pointCloudDebug: False

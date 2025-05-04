@@ -65,7 +65,7 @@ def retrieve_cfg(args, use_rlg_config=False):
                      "ShadowHandCatchOver2Underarm", "ShadowHandBottleCap", "ShadowHandDoorCloseInward", "ShadowHandDoorCloseOutward",
                     "ShadowHandDoorOpenInward", "ShadowHandDoorOpenOutward", "ShadowHandKettle", "ShadowHandPen", "ShadowHandSwitch",
                     "ShadowHandPushBlock", "ShadowHandSwingCup", "ShadowHandGraspAndPlace", "ShadowHandScissors", "AllegroHandOver", 
-                    "AllegroHandCatchUnderarm", "LeapHandOver"]:
+                    "AllegroHandCatchUnderarm"]:
         return os.path.join(args.logdir, "{}/{}/{}".format(args.task, args.algo, args.algo)), "cfg/{}/config.yaml".format(args.algo), "cfg/{}.yaml".format(args.task)
 
     elif args.task in ["ShadowHandLiftUnderarm"]:
@@ -82,6 +82,8 @@ def retrieve_cfg(args, use_rlg_config=False):
 
     elif args.task in ["ShadowHandMetaMT1"]:
         return os.path.join(args.logdir, "{}/{}/{}".format(args.task, args.algo, args.algo)), "cfg/{}/config.yaml".format(args.algo), "cfg/meta_env_cfg/{}.yaml".format(args.task)
+    elif args.task in ["LeapHandOver"]:
+        return os.path.join(args.logdir, "{}/{}/{}".format(args.task, args.algo, args.algo)), "cfg/{}/leap_config.yaml".format(args.algo), "cfg/{}.yaml".format(args.task)
 
     else:
         warn_task_name()
